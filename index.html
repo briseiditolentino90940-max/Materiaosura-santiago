@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materia Oscura - Completo</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a1a;
+  font-family: Arial, sans-serif;
+  color: #222;
+  padding: 20px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1100px;
+  background: white;
+  margin: auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+header {
+  background: #102c35;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+header h1 {
+  color: #f4d35e;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+nav button {
+  background: #174653;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #f4d35e;
+  color: #102c35;
+}
+
+.marquesina {
+  background: #f4d35e;
+  color: #102c35;
+  padding: 12px;
+  font-weight: bold;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.pagina {
+  display: none;
+  padding: 20px 5px;
+  min-height: 600px;
+}
+
+.pagina.activa {
+  display: block;
+}
+
+h2 {
+  color: #174653;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #174653;
+  margin: 15px 0 8px;
+}
+
+p {
+  line-height: 1.7;
+  margin: 12px 0;
+  text-align: justify;
+}
+
+.imagen {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 4px solid #174653;
+}
+
+.linea {
+  height: 4px;
+  background: #f4d35e;
+  margin: 15px 0;
+  border: none;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.botones button {
+  background: #174653;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botones button:hover {
+  background: #f4d35e;
+  color: #102c35;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid #174653;
+  padding: 12px;
+  text-align: center;
+}
+
+.tabla th {
+  background: #174653;
+  color: white;
+}
+
+.tabla tr:nth-child(even) {
+  background: #edf4f5;
+}
+
+ul {
+  margin: 15px 0 15px 25px;
+  line-height: 1.8;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border: 1px solid #174653;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.enviar {
+  background: #174653;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #102c35;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+
+  .contenedor {
+    padding: 12px;
+  }
+
+  nav button {
+    flex: 1 1 40%;
+  }
+
+  .tabla {
+    font-size: 13px;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 7px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<header>
+  <h1>LA MATERIA OSCURA</h1>
+  <p>Descubriendo los misterios del universo</p>
+</header>
+
+<nav>
+  <button onclick="ir(1)">Inicio</button>
+  <button onclick="ir(2)">¿Qué es?</button>
+  <button onclick="ir(3)">Características</button>
+  <button onclick="ir(4)">Contacto</button>
+</nav>
+
+<div class="marquesina">
+  <marquee>✨ ¡Bienvenidos al fascinante mundo de la materia oscura! ✨</marquee>
+</div>
+
+<!-- PÁGINA 1 -->
+
+<section class="pagina activa" id="pagina1">
+
+<h2>¿Qué sabemos del universo?</h2>
+<hr class="linea">
+
+<p>
+El universo está formado por millones de galaxias, estrellas y planetas.
+Sin embargo, existe una gran parte del universo que todavía no podemos
+observar directamente. A esta parte se le conoce como materia oscura.
+</p>
+
+<!-- IMAGEN 1: MATERIA OSCURA ALREDEDOR DE LA VÍA LÁCTEA -->
+
+<img
+src="https://cdn.eso.org/images/wallpaper5/eso1217a.jpg"
+alt="Representación de la materia oscura alrededor de la Vía Láctea"
+class="imagen"
+>
+
+<p>
+La materia oscura es uno de los grandes misterios de la astronomía.
+Aunque no podemos verla directamente, los científicos saben que existe
+por los efectos gravitacionales que produce sobre otros cuerpos celestes.
+</p>
+
+<div class="marquesina">
+  <marquee direction="right">
+    🌌 El universo es mucho más misterioso de lo que imaginamos 🌌
+  </marquee>
+</div>
+
+<p>
+Su estudio permite comprender mejor cómo se forman y se mantienen
+unidas las galaxias.
+</p>
+
+<div class="botones">
+  <span></span>
+  <button onclick="ir(2)">Siguiente página →</button>
+</div>
+
+</section>
+
+<!-- PÁGINA 2 -->
+
+<section class="pagina" id="pagina2">
+
+<h2>¿Qué es la materia oscura?</h2>
+<hr class="linea">
+
+<p>
+La materia oscura es una forma de materia que no emite, absorbe ni refleja
+luz de manera detectable. Por eso no podemos observarla con telescopios
+como hacemos con las estrellas y los planetas.
+</p>
+
+<h3>¿Cómo sabemos que existe?</h3>
+
+<p>
+Los científicos han encontrado evidencias de su existencia al estudiar
+el movimiento de las estrellas y las galaxias. Estos movimientos indican
+que hay más masa de la que podemos observar.
+</p>
+
+<!-- IMAGEN 2: CONCENTRACIONES DE MATERIA OSCURA -->
+
+<img
+src="https://cdn.esahubble.org/archives/images/wallpaper2/heic2016c.jpg"
+alt="Representación de concentraciones de materia oscura"
+class="imagen"
+>
+
+<h3>¿Por qué es importante?</h3>
+
+<p>
+Es importante porque ayuda a explicar cómo se mantiene unida la estructura
+del universo y cómo se forman las galaxias.
+</p>
+
+<div class="botones">
+  <button onclick="ir(1)">← Anterior</button>
+  <button onclick="ir(3)">Siguiente página →</button>
+</div>
+
+</section>
+
+<!-- PÁGINA 3 -->
+
+<section class="pagina" id="pagina3">
+
+<h2>Características de la materia oscura</h2>
+<hr class="linea">
+
+<p>
+La materia oscura tiene características especiales que la hacen diferente
+de la materia que conocemos.
+</p>
+
+<ul>
+  <li>No emite luz.</li>
+  <li>No puede observarse directamente.</li>
+  <li>Produce efectos gravitacionales.</li>
+  <li>Se encuentra distribuida por el universo.</li>
+  <li>Ayuda a explicar el movimiento de las galaxias.</li>
+</ul>
+
+<h3>Diferencias entre materia visible y materia oscura</h3>
+
+<table class="tabla">
+  <tr>
+    <th>Materia visible</th>
+    <th>Materia oscura</th>
+  </tr>
+  <tr>
+    <td>Emite o refleja luz.</td>
+    <td>No emite ni refleja luz detectable.</td>
+  </tr>
+  <tr>
+    <td>Puede observarse con telescopios.</td>
+    <td>No puede observarse directamente.</td>
+  </tr>
+  <tr>
+    <td>Forma estrellas y planetas.</td>
+    <td>Se detecta por sus efectos gravitacionales.</td>
+  </tr>
+</table>
+
+<h3>Datos curiosos</h3>
+
+<ul>
+  <li>La materia oscura representa una parte importante del contenido del universo.</li>
+  <li>Su composición todavía es desconocida.</li>
+  <li>Los científicos continúan investigándola.</li>
+</ul>
+
+<div class="botones">
+  <button onclick="ir(2)">← Anterior</button>
+  <button onclick="ir(4)">Siguiente página →</button>
+</div>
+
+</section>
+
+<!-- PÁGINA 4 -->
+
+<section class="pagina" id="pagina4">
+
+<h2>Contacto</h2>
+<hr class="linea">
+
+<p>
+¿Te interesa conocer más sobre los misterios del universo?
+Déjanos un mensaje.
+</p>
+
+<form onsubmit="enviarWhats(event)">
+
+<label>Nombre:</label>
+<input type="text" id="nombre"
+placeholder="Escribe tu nombre" required>
+
+<label>Correo electrónico:</label>
+<input type="email" id="correo"
+placeholder="Escribe tu correo" required>
+
+<label>Mensaje:</label>
+<textarea id="mensaje"
+placeholder="Escribe tu mensaje..." required></textarea>
+
+<button type="submit" class="enviar">
+Enviar mensaje
+</button>
+
+</form>
+
+<div class="botones">
+  <button onclick="ir(3)">← Anterior</button>
+  <span></span>
+</div>
+
+</section>
+
+<footer>
+  <div class="marquesina">
+    <marquee>
+      🌠 La ciencia nos ayuda a descubrir los secretos del universo 🌠
+    </marquee>
+  </div>
+  <p>Proyecto escolar - Materia Oscura</p>
+  <p>Explorando los misterios del universo ✨</p>
+</footer>
+
+</div>
+
+<script>
+
+function ir(num) {
+  let paginas = document.querySelectorAll(".pagina");
+
+  paginas.forEach(function(pagina) {
+    pagina.classList.remove("activa");
+  });
+
+  document.getElementById("pagina" + num).classList.add("activa");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function enviarWhats(event) {
+  event.preventDefault();
+
+  let nombre = document.getElementById("nombre").value;
+  let correo = document.getElementById("correo").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let texto = "Hola, mi nombre es: " + nombre +
+  "\nMi correo es: " + correo +
+  "\nMi mensaje es: " + mensaje;
+
+  let url = "https://wa.me/?text=" + encodeURIComponent(texto);
+
+  window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
